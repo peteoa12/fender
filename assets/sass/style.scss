@@ -1,0 +1,292 @@
+@import "_variables";
+
+html,body {
+	width:100%;
+	height:100%;
+	font-family: 'Josefin Sans', sans-serif;
+	smoothing: antialiased;
+	hyphens: none;
+
+}
+
+section {
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height:100%;
+}
+
+//DUAL IMAGE<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+#dual-img {
+	background-image: 
+	url(../img/fender-logo.gif),
+	url(../img/concert.jpeg);
+	background-size: 75%,cover;
+	background-repeat: no-repeat, no-repeat;
+	background-position: center, center;
+	background-attachment: fixed, scroll;
+	overflow:hidden;
+}
+
+.sub-title-container{
+	overflow:hidden;
+	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+#sub-title {
+
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0px 0px 3px black;
+    color: white;
+    padding-top:150px;
+
+    transform: translateY(-100%);
+	transition-property: opacity, transform;
+	transition-duration: 0.4s, 0.3s;
+	transition-delay: 0.3s;
+	transition: .7s;
+}
+
+
+
+
+
+
+
+// //PRODUCT DISPLAY<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+#product-display {
+	background-color:#efefef;
+	position:relative;
+	width:100%;
+}
+
+.brand-banner {
+	position:absolute;
+	width:$col-1-3;
+	margin:0 auto;
+	// overflow:hidden;
+	top: 50%;
+	left: 80%;
+	max-height:700px;
+	
+	transform: translate(-50%, -50%);
+	transition: .5s;
+	transition-delay: 0.3s;
+
+}
+
+#brand-title {
+	text-align: center;
+	font-size: 3em;
+	font-weight: 900;
+	transform: translateX(-100%) scale(0);
+	transition: .4s;
+}
+
+#brand-description {
+	opacity: 0;
+	text-align: center;
+	font-size: 1.5em;
+	padding:10px;
+	transform: translateY(-25px) scale(0);
+	transition-property: opacity, transform;
+	transition-duration: 0.2s, 0.3s;
+	transition-delay: 0.3s;
+	transition: .3s;
+	line-height:1.3em;
+			
+}
+
+#explore-button {
+	position:relative;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    opacity: 0;
+    transition-property: opacity,color;
+    transition-duration: 0.2s, 0.2s;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color:white;
+    transition: 0.2s;
+    z-index:9;
+
+    &:hover {
+    	background-color:#e2ba63;
+
+    	#explore {
+    		color:white;
+    	}
+    }
+
+}
+
+.swatch-container {
+	position: relative;
+	width: 100px;
+    height: 50px;
+    border:1px solid red;
+
+}
+
+.swatch {
+	position:absolute;
+	width:40px;
+	height:40px;
+	background-color:red;
+	border-radius:100%;
+	top:10%;
+	left:0;
+	// opacity:(0);
+
+	h3 {
+		text-align:center;
+		padding-top:13px;
+		font-size: 1em;
+	}
+
+	// &:hover {
+	// 	background-color:white;
+	// 	background-color:#607c92;
+	// }
+	
+}
+
+#swamp {
+	transform:translateX(0);
+	background-color:#b87f56;
+	color:white;
+}
+
+
+#blue {
+	transform:translateX(0);
+	background-color:#5a768b;
+	color:white;
+	
+}
+
+#white {
+	transform:translateX(0);
+	background-color:#d6cfbe;
+	color:#252525;
+
+}
+
+#explore {
+    text-align: center;
+    padding-top: 16px;
+    opacity:0;
+    margin: 0 auto;
+
+    transform: translateY(-100%);
+	transition-property: opacity, transform;
+	transition-duration: 0.4s, 0.3s;
+	transition-delay: 0.3s;
+	transition: .7s;
+}
+
+//GUITAR IMAGES===========================================================
+
+.guitar {
+    position: absolute;
+    width: 15%;
+    top: 25px;
+    left: 280px;
+    
+    transform-origin: bottom;
+}
+
+#guitar-white {
+	z-index: 9;
+	
+	transition:transform 1s;
+}
+
+
+#guitar-burst {
+	z-index: 10;
+}
+
+
+#guitar-ash {
+	top:23px;
+	z-index: 8;
+	
+	transition-property: transform;
+	transition-duration: 0.75s;
+	transition-delay: 0.25s;
+}
+
+
+//ANIMATIONS===================================================================
+
+
+//Banner sub title
+.animate #sub-title {
+	transform:translateY(0);
+
+}
+
+//Guitars
+.animate-two #guitar-white {
+	transform: rotate(40deg);
+}
+
+.animate-two #guitar-ash {
+	transform:rotate(-40deg);
+}
+
+//Product Copy
+.animate-two #brand-title  {
+	transform: translateX(0%) scale(1);
+}
+
+.animate-two #brand-description {
+	opacity:1;
+	transform:translateY(0px)scale(1);
+}
+
+//Button
+.animate-two #explore {
+	transform:translateY(0);
+	opacity:(1);
+}
+
+.animate-two #explore-button {
+	opacity:(1);
+}
+
+//Swatches
+
+.animate #swamp {
+	transform:translateX(-150%);
+}
+
+
+.animate #blue {
+	transform:translateX(-323%);
+}
+
+.animate #white {
+	transform:translateX(-500%);
+}
+
+//=============================================================================
+
+
+
+
+
+

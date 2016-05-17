@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Josefin Sans', sans-serif;
+  smoothing: antialiased;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#dual-img {
+  background-image: url(../img/fender-logo.gif), url(../img/concert.jpeg);
+  background-size: 75%,cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-attachment: fixed, scroll;
+  overflow: hidden;
+}
+
+.sub-title-container {
+  overflow: hidden;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+}
+
+#sub-title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 0px 0px 3px black;
+  color: white;
+  padding-top: 150px;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-duration: 0.4s, 0.3s;
+  transition-delay: 0.3s;
+  transition: .7s;
+}
+
+#product-display {
+  background-color: #efefef;
+  position: relative;
+  width: 100%;
+}
+
+.brand-banner {
+  position: absolute;
+  width: 33.33333%;
+  margin: 0 auto;
+  top: 50%;
+  left: 80%;
+  max-height: 700px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: .5s;
+  transition-delay: 0.3s;
+}
+
+#brand-title {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+  -webkit-transform: translateX(-100%) scale(0);
+      -ms-transform: translateX(-100%) scale(0);
+          transform: translateX(-100%) scale(0);
+  transition: .4s;
+}
+
+#brand-description {
+  opacity: 0;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+  -webkit-transform: translateY(-25px) scale(0);
+      -ms-transform: translateY(-25px) scale(0);
+          transform: translateY(-25px) scale(0);
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-duration: 0.2s, 0.3s;
+  transition-delay: 0.3s;
+  transition: .3s;
+  line-height: 1.3em;
+}
+
+#explore-button {
+  position: relative;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  opacity: 0;
+  transition-property: opacity,color;
+  transition-duration: 0.2s, 0.2s;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: white;
+  transition: 0.2s;
+  z-index: 9;
+}
+
+#explore-button:hover {
+  background-color: #e2ba63;
+}
+
+#explore-button:hover #explore {
+  color: white;
+}
+
+.swatch-container {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  border: 1px solid red;
+}
+
+.swatch {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 100%;
+  top: 10%;
+  left: 0;
+}
+
+.swatch h3 {
+  text-align: center;
+  padding-top: 13px;
+  font-size: 1em;
+}
+
+#swamp {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  background-color: #b87f56;
+  color: white;
+}
+
+#blue {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  background-color: #5a768b;
+  color: white;
+}
+
+#white {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  background-color: #d6cfbe;
+  color: #252525;
+}
+
+#explore {
+  text-align: center;
+  padding-top: 16px;
+  opacity: 0;
+  margin: 0 auto;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-duration: 0.4s, 0.3s;
+  transition-delay: 0.3s;
+  transition: .7s;
+}
+
+.guitar {
+  position: absolute;
+  width: 15%;
+  top: 25px;
+  left: 280px;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#guitar-white {
+  z-index: 9;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+#guitar-burst {
+  z-index: 10;
+}
+
+#guitar-ash {
+  top: 23px;
+  z-index: 8;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-duration: 0.75s;
+  transition-delay: 0.25s;
+}
+
+.animate #sub-title {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.animate-two #guitar-white {
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+.animate-two #guitar-ash {
+  -webkit-transform: rotate(-40deg);
+      -ms-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+.animate-two #brand-title {
+  -webkit-transform: translateX(0%) scale(1);
+      -ms-transform: translateX(0%) scale(1);
+          transform: translateX(0%) scale(1);
+}
+
+.animate-two #brand-description {
+  opacity: 1;
+  -webkit-transform: translateY(0px) scale(1);
+      -ms-transform: translateY(0px) scale(1);
+          transform: translateY(0px) scale(1);
+}
+
+.animate-two #explore {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.animate-two #explore-button {
+  opacity: 1;
+}
+
+.animate #swamp {
+  -webkit-transform: translateX(-150%);
+      -ms-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+.animate #blue {
+  -webkit-transform: translateX(-323%);
+      -ms-transform: translateX(-323%);
+          transform: translateX(-323%);
+}
+
+.animate #white {
+  -webkit-transform: translateX(-500%);
+      -ms-transform: translateX(-500%);
+          transform: translateX(-500%);
+}
+
+/*# sourceMappingURL=style.css.map */
